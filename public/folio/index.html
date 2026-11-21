@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#FAF8F5" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Folio" />
+  <title>Folio — Hobby &amp; Habit Progress</title>
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="./assets/icon.svg" />
+  <link rel="apple-touch-icon" href="./assets/icon.svg" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Editorial Masthead -->
+    <header class="top-header">
+      <div class="brand-block">
+        <span class="eyebrow" id="headerDate">WEEKLY EDITION</span>
+        <h1 class="brand-title">Folio</h1>
+      </div>
+      <div class="header-actions">
+        <button class="icon-pill-btn drive-status-pill" id="btnDriveStatus" type="button" title="Google Drive Auto-Upload">
+          <span class="drive-dot" id="driveStatusDot"></span>
+          <span id="driveStatusLabel">Drive</span>
+        </button>
+        <button class="icon-pill-btn" id="btnAddHobby" type="button" title="Add Hobby">
+          <span>+ Hobby</span>
+        </button>
+        <button class="icon-btn" id="btnSettings" type="button" aria-label="Manage Data &amp; Settings" title="Settings &amp; Data">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Tab Views -->
+    <main class="main-content">
+      <!-- TAB 1: CONSOLIDATED BENTO HOME -->
+      <section id="view-bento" class="tab-view active">
+        <div id="weeklyPulseMount"></div>
+
+        <div class="section-heading-row">
+          <h2 class="section-heading">In Progress &amp; Rhythm</h2>
+          <span class="section-caption">Tap a card to update focus</span>
+        </div>
+
+        <div id="bentoGridMount" class="bento-grid"></div>
+
+        <div class="section-heading-row mt-lg">
+          <h2 class="section-heading">Recent Milestones</h2>
+          <button class="text-link-btn" id="btnSeeAllMilestones" type="button">View all →</button>
+        </div>
+        <div id="recentMilestonesStrip" class="milestone-strip"></div>
+      </section>
+
+      <!-- TAB 2: UNIFIED MILESTONE VAULT -->
+      <section id="view-milestones" class="tab-view">
+        <div class="vault-header">
+          <div>
+            <span class="eyebrow">CONSOLIDATED HIGHLIGHTS</span>
+            <h2 class="vault-title">Milestone Vault</h2>
+          </div>
+          <button class="primary-pill-btn" id="btnNewMilestoneTop" type="button">✦ Add Milestone</button>
+        </div>
+        <div id="milestoneFiltersMount" class="filter-chip-row"></div>
+        <div id="milestoneGalleryMount" class="milestone-gallery"></div>
+      </section>
+
+      <!-- TAB 3: SESSION JOURNAL & BALANCE -->
+      <section id="view-journal" class="tab-view">
+        <div class="vault-header">
+          <div>
+            <span class="eyebrow">PRACTICE LOGBOOK</span>
+            <h2 class="vault-title">Session Journal</h2>
+          </div>
+        </div>
+        <div id="journalBalanceMount"></div>
+        <div id="journalListMount" class="journal-list"></div>
+      </section>
+    </main>
+
+    <!-- Floating Mobile-First Bottom Navigation -->
+    <nav class="bottom-nav" aria-label="Primary Navigation">
+      <button class="nav-tab active" data-tab="bento" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="9" rx="1.5"></rect>
+          <rect x="14" y="3" width="7" height="5" rx="1.5"></rect>
+          <rect x="14" y="12" width="7" height="9" rx="1.5"></rect>
+          <rect x="3" y="16" width="7" height="5" rx="1.5"></rect>
+        </svg>
+        <span>Bento</span>
+      </button>
+
+      <button class="nav-tab" data-tab="milestones" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+        <span>Milestones</span>
+      </button>
+
+      <button class="nav-fab" id="btnOpenQuickCapture" type="button" aria-label="Log Session or Milestone">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+
+      <button class="nav-tab" data-tab="journal" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span>Journal</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- BOTTOM SHEET BACKDROP & DYNAMIC MODAL CONTAINER -->
+  <div id="sheetBackdrop" class="sheet-backdrop hidden">
+    <div id="sheetPanel" class="sheet-panel" role="dialog" aria-modal="true">
+      <div class="sheet-grabber"></div>
+      <div id="sheetContent"></div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX FOR PHOTOS -->
+  <div id="lightboxOverlay" class="lightbox-overlay hidden">
+    <button class="lightbox-close" id="btnCloseLightbox" type="button" aria-label="Close">✕</button>
+    <img id="lightboxImage" src="" alt="Milestone preview" />
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toastBanner" class="toast-banner hidden"></div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
