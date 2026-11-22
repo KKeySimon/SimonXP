@@ -5,7 +5,6 @@ import { defineConfig } from 'vite';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES === 'true' ? '/SimonXP/' : './',
   build: {
     rollupOptions: {
       input: {
