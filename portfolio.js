@@ -77,7 +77,7 @@ const VFS = {
             '============================================================',
             ' Welcome to SimonOS XP (Terminal Shell — /home)',
             '============================================================',
-            'Hi! I am Simon Kye — Computer Scientist (BU BA/MS CS).',
+            'Hi! I am Simon Kye — Google SWE · BU \'25 BA/MS CS.',
             '',
             'Explore my portfolio right from the terminal:',
             '  ls                 List folders in the current directory',
@@ -85,7 +85,7 @@ const VFS = {
             '  cd fun-projects    Enter a directory (supports .. and ~)',
             '  cat about/bio.txt  Read any file (also: head, tail, less)',
             '  grep pytorch       Search across all files in /home',
-            '  open folio.app     Launch interactive apps (/folio, /room.html)',
+            '  open hk-3d-room    Launch interactive apps (/room.html, /folio)',
             '  neofetch           Print system & profile summary',
             '  help               Show all supported commands'
           ].join('\n')
@@ -95,13 +95,15 @@ const VFS = {
           children: {
             'bio.txt': {
               type: 'file',
-              size: 890,
+              size: 920,
               content: [
                 'Name: Simon Kye',
-                'Background: Korean · Grew up in Hong Kong (13 yrs) · Based in the US',
+                'Role: Software Engineer at Google (Jun 2025 – Present)',
+                'Journey: Hong Kong -> Boston -> San Jose -> NYC',
                 '',
-                'Hi! My name is Simon Kye. I am a computer scientist who studied at',
-                'Boston University completing the BA/MS dual degree in Computer Science.',
+                'Hi! My name is Simon Kye. I am a Software Engineer at Google who',
+                'graduated from Boston University (\'25) with a BA/MS dual degree in',
+                'Computer Science.',
                 '',
                 'I love programming because when something goes wrong, it is never for',
                 'some mystical reason — there is always a logical trail behind how code',
@@ -136,40 +138,65 @@ const VFS = {
             }
           }
         },
-        'fun-projects': {
+        experience: {
           type: 'dir',
           children: {
-            'folio.app': {
-              type: 'app',
-              url: './folio/',
-              size: 4096,
+            'google.txt': {
+              type: 'file',
+              size: 220,
               content: [
-                '[EXECUTABLE WEB APP] Folio — Hobby & Habit Progress PWA',
-                'URL: ./folio/',
-                'Stack: Vanilla JS, IndexedDB, Service Worker PWA, Google Drive API v3',
+                'Google — Software Engineer',
+                'Dates: Jun 2025 – Present',
                 '',
-                'An editorial Bento habit & hobby journal designed for wildly different',
-                'hobbies (piano stage pipelines, drawing galleries, dish collections,',
-                'workout rhythm & Chinese character tiers) with photo/video/audio',
-                'milestones that auto-organize into Google Drive folders.',
-                '',
-                '-> Run `open folio.app` or `./folio.app` to launch!'
+                '- Software Engineer at Google.'
               ].join('\n')
             },
-            'hk-3d-room.app': {
-              type: 'app',
-              url: './room.html',
-              size: 8192,
+            'bit-lab.txt': {
+              type: 'file',
+              size: 480,
               content: [
-                '[EXECUTABLE 3D SCENE] 3D Hong Kong Childhood Room (Original Portfolio)',
-                'URL: ./room.html',
-                'Stack: Three.js, Blender, GSAP, Vite (Inspired by Boko33)',
+                'BIT Lab (Boston University) — Research Assistant',
+                'Dates: Jan 2024 – Jun 2024',
                 '',
-                'An interactive 3D diorama of the bedroom in Hong Kong where I grew up',
-                'for 13 years — every 3D asset modeled from scratch in Blender as a',
-                'personal keepsake before moving.',
+                '- Conducted literature reviews and empirical analysis on AI data regulation,',
+                '  generative AI, and trend-analysis algorithms in business analytics.',
+                '- Built large-scale data collection jobs (200GB+ per run) across Wikipedia',
+                '  and Reddit studying the training-data lifespan of AI systems.'
+              ].join('\n')
+            },
+            'biscovery.txt': {
+              type: 'file',
+              size: 460,
+              content: [
+                'Biscovery Limited — Process Automation Intern',
+                'Dates: May 2021 – May 2022',
                 '',
-                '-> Run `open hk-3d-room.app` or `./hk-3d-room.app` to visit!'
+                '- Automated 10+ hour manual workflows into sub-minute pipelines using UiPath,',
+                '  Computer Vision, and automated Excel/email reporting.',
+                '- Self-taught UiPath (50+ hrs) and earned the UiPath Certified Advanced RPA',
+                '  Developer credential.'
+              ].join('\n')
+            },
+            'cs-tutoring.txt': {
+              type: 'file',
+              size: 390,
+              content: [
+                'Freelance CS Tutor — AP CSA / IB CS HL',
+                'Dates: Jan 2021 – Sep 2023',
+                '',
+                '- Taught weekly 1-on-1 AP CSA, IB CS HL, and youth coding.',
+                '- Designed a 10-week project-based curriculum tailored to student interests,',
+                '  inspiring students to major in Computer Science.'
+              ].join('\n')
+            },
+            'praya-institute.txt': {
+              type: 'file',
+              size: 310,
+              content: [
+                'Praya Institute — Teacher\'s Assistant (AMC Mathematics)',
+                '',
+                '- Taught competition math (AMC) twice weekly to cohorts of 20 students.',
+                '- Authored 16 problem sets and LaTeX solution guides for middle schoolers.'
               ].join('\n')
             }
           }
@@ -272,59 +299,6 @@ const VFS = {
             }
           }
         },
-        experience: {
-          type: 'dir',
-          children: {
-            'bit-lab.txt': {
-              type: 'file',
-              size: 480,
-              content: [
-                'BIT Lab (Boston University) — Research Assistant',
-                'Dates: Jan 2024 – Jun 2024',
-                '',
-                '- Conducted literature reviews and empirical analysis on AI data regulation,',
-                '  generative AI, and trend-analysis algorithms in business analytics.',
-                '- Built large-scale data collection jobs (200GB+ per run) across Wikipedia',
-                '  and Reddit studying the training-data lifespan of AI systems.'
-              ].join('\n')
-            },
-            'biscovery.txt': {
-              type: 'file',
-              size: 460,
-              content: [
-                'Biscovery Limited — Process Automation Intern',
-                'Dates: May 2021 – May 2022',
-                '',
-                '- Automated 10+ hour manual workflows into sub-minute pipelines using UiPath,',
-                '  Computer Vision, and automated Excel/email reporting.',
-                '- Self-taught UiPath (50+ hrs) and earned the UiPath Certified Advanced RPA',
-                '  Developer credential.'
-              ].join('\n')
-            },
-            'cs-tutoring.txt': {
-              type: 'file',
-              size: 390,
-              content: [
-                'Freelance CS Tutor — AP CSA / IB CS HL',
-                'Dates: Jan 2021 – Sep 2023',
-                '',
-                '- Taught weekly 1-on-1 AP CSA, IB CS HL, and youth coding.',
-                '- Designed a 10-week project-based curriculum tailored to student interests,',
-                '  inspiring students to major in Computer Science.'
-              ].join('\n')
-            },
-            'praya-institute.txt': {
-              type: 'file',
-              size: 310,
-              content: [
-                'Praya Institute — Teacher\'s Assistant (AMC Mathematics)',
-                '',
-                '- Taught competition math (AMC) twice weekly to cohorts of 20 students.',
-                '- Authored 16 problem sets and LaTeX solution guides for middle schoolers.'
-              ].join('\n')
-            }
-          }
-        },
         links: {
           type: 'dir',
           children: {
@@ -334,8 +308,46 @@ const VFS = {
               content: [
                 'GitHub:         https://github.com/KKeySimon',
                 'Website:        https://simonkye.com',
-                'Folio App:      /folio/       (Fun Projects -> Folio)',
-                '3D HK Room:     /room.html    (Fun Projects -> 3D Room)'
+                '3D HK Room:     /room.html    (Fun Projects -> 3D Room)',
+                'Folio App:      /folio/       (Fun Projects -> Folio)'
+              ].join('\n')
+            }
+          }
+        },
+        'fun-projects': {
+          type: 'dir',
+          children: {
+            'hk-3d-room.app': {
+              type: 'app',
+              url: './room.html',
+              size: 8192,
+              content: [
+                '[EXECUTABLE 3D SCENE] 3D Hong Kong Childhood Room (Original Portfolio)',
+                'URL: ./room.html',
+                'Stack: Three.js, Blender, GSAP, Vite (Inspired by Boko33)',
+                '',
+                'An interactive 3D diorama of the bedroom in Hong Kong where I grew up',
+                'for 13 years — every 3D asset modeled from scratch in Blender as a',
+                'personal keepsake before moving.',
+                '',
+                '-> Run `open hk-3d-room.app` or `./hk-3d-room.app` to visit!'
+              ].join('\n')
+            },
+            'folio.app': {
+              type: 'app',
+              url: './folio/',
+              size: 4096,
+              content: [
+                '[EXECUTABLE WEB APP] Folio — Hobby & Habit Progress PWA',
+                'URL: ./folio/',
+                'Stack: Vanilla JS, IndexedDB, Service Worker PWA, Google Drive API v3',
+                '',
+                'An editorial Bento habit & hobby journal designed for wildly different',
+                'hobbies (piano stage pipelines, drawing galleries, dish collections,',
+                'workout rhythm & Chinese character tiers) with photo/video/audio',
+                'milestones that auto-organize into Google Drive folders.',
+                '',
+                '-> Run `open folio.app` or `./folio.app` to launch!'
               ].join('\n')
             }
           }
@@ -975,7 +987,7 @@ function runSingleSegment(segment) {
     }
 
     case 'whoami':
-      printTermText('simon (Simon Kye — Computer Scientist, BU BA/MS CS)');
+      printTermText('simon (Simon Kye — Google SWE · BU \'25 BA/MS CS)');
       break;
 
     case 'uname':
@@ -999,10 +1011,10 @@ function runSingleSegment(segment) {
         [
           '<span class="term-dir">   ████████╗ ████████╗</span>   <span class="term-exec">simon@simonkye.com</span>',
           '<span class="term-dir">   ██╔═════╝ ██╔═════╝</span>   ------------------',
-          '<span class="term-exec">   ████████╗ ████████╗</span>   <span class="term-accent">OS:</span> SimonOS XP Professional (Retro Edition)',
+          '<span class="term-exec">   ████████╗ ████████╗</span>   <span class="term-accent">Role:</span> Google SWE (Jun 2025 – Present)',
           '<span class="term-accent">   ██╔═════╝ ██╔═════╝</span>   <span class="term-accent">Education:</span> Boston University BA/MS CS (\'25)',
-          '<span class="term-pink">   ████████╗ ████████╗</span>   <span class="term-accent">Roots:</span> Korean · Hong Kong -> Boston',
-          '<span class="term-pink">   ╚═══════╝ ╚═══════╝</span>   <span class="term-accent">Fun Apps:</span> Folio (/folio/) &amp; 3D HK Room (/room.html)',
+          '<span class="term-pink">   ████████╗ ████████╗</span>   <span class="term-accent">Journey:</span> Hong Kong -> Boston -> San Jose -> NYC',
+          '<span class="term-pink">   ╚═══════╝ ╚═══════╝</span>   <span class="term-accent">Fun Apps:</span> 3D HK Room (/room.html) &amp; Folio (/folio/)',
           '                         <span class="term-accent">Hobbies:</span> Piano, Drawing, Cooking, Gym, Chinese',
           '                         <span class="term-accent">Shell:</span> simon-sh (/home read-only VFS)'
         ].join('\n')
