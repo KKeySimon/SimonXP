@@ -536,6 +536,32 @@ body.night-theme .xp-side-link {
   overflow: hidden;
 }
 
+.xp-statusbar {
+  background: var(--xp-surface);
+  border-top: 1px solid var(--xp-border-inner);
+  padding: 4px 12px;
+  font-size: 11.5px;
+  color: var(--xp-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  user-select: none;
+}
+
+.xp-desktop-watermark {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 1;
+  text-align: right;
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.86);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+  pointer-events: none;
+}
+
 .welcome-title {
   font-size: 21px;
   font-weight: 800;

@@ -87,7 +87,9 @@ const VFS = {
             '  grep pytorch       Search across all files in /home',
             '  open hk-3d-room    Launch interactive apps (/room.html, /folio)',
             '  neofetch           Print system & profile summary',
-            '  help               Show all supported commands'
+            '  help               Show all supported commands',
+            '',
+            'Note: This portfolio interface was made with AI.'
           ].join('\n')
         },
         about: {
