@@ -157,17 +157,14 @@
           </aside>
           <div class="xp-body">
             <div class="welcome-banner">
-              <div class="xp-avatar" aria-hidden="true">
-                <svg viewBox="0 0 120 120" width="68" height="68">
-                  <rect width="120" height="120" fill="#2A6AD9" />
-                  <path d="M22 120 C26 92 94 92 98 120 Z" fill="#52B848" />
-                  <circle cx="60" cy="62" r="27" fill="#FAD6B8" stroke="#231F20" stroke-width="3" />
-                  <path d="M32 57 C31 32 88 30 90 56 C82 44 69 42 58 45 C46 42 38 48 32 57 Z" fill="#262324" />
-                  <circle cx="49" cy="62" r="8.5" fill="rgba(255,255,255,0.3)" stroke="#231F20" stroke-width="2.5" />
-                  <circle cx="71" cy="62" r="8.5" fill="rgba(255,255,255,0.3)" stroke="#231F20" stroke-width="2.5" />
-                  <line x1="57.5" y1="62" x2="62.5" y2="62" stroke="#231F20" stroke-width="2.5" />
-                  <path d="M54 74 Q60 79 66 74" fill="none" stroke="#231F20" stroke-width="2.5" stroke-linecap="round" />
-                </svg>
+              <div class="xp-avatar">
+                <img
+                  src="./avatar-pixel.jpg"
+                  alt="Simon Kye pixel art portrait"
+                  class="xp-pixel-avatar"
+                  width="68"
+                  height="68"
+                />
               </div>
               <div>
                 <h1 class="welcome-title">
@@ -458,9 +455,24 @@
           <div class="xp-addr-box">👤 /home/about</div>
         </div>
         <div class="xp-body">
-          <h2 style="font-size:18px;margin-bottom:8px;">Simon Kye · Google SWE</h2>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+            <div class="xp-avatar" style="width:64px;height:64px;">
+              <img
+                src="./avatar-pixel.jpg"
+                alt="Simon Kye pixel art portrait"
+                class="xp-pixel-avatar"
+                width="64"
+                height="64"
+              />
+            </div>
+            <div>
+              <h2 style="font-size:18px;margin-bottom:2px;">Simon Kye · Google SWE</h2>
+              <span style="font-size:12.5px;color:var(--xp-muted);">Google SecOps · Data Integrity Team</span>
+            </div>
+          </div>
           <p style="margin-bottom:11px;">
-            Hi! I’m Simon — a Software Engineer at <strong>Google</strong> who graduated from
+            Hi! I’m Simon — a Software Engineer at <strong>Google</strong> working on the
+            <strong>Data Integrity Team in Google SecOps</strong>. I graduated from
             <strong>Boston University</strong> (’25) with a BA/MS dual degree in Computer Science. I’m Korean, grew up
             in Hong Kong, and have lived across Boston, San Jose, and NYC — experiences that have helped me adapt
             quickly across different cultures and environments.
@@ -476,11 +488,11 @@
           </p>
 
           <div class="xp-item-card" style="margin-bottom:0;">
-            <strong style="font-size:13.5px;display:block;margin-bottom:6px;">Current Hobbies (See Fun Projects → Folio)</strong>
+            <strong style="font-size:13.5px;display:block;margin-bottom:6px;">Current Hobbies</strong>
             <div class="xp-tags">
-              <span class="xp-tag">🎹 Piano (Clair de Lune)</span>
+              <span class="xp-tag">🎹 Piano (Rosalina’s Observatory)</span>
               <span class="xp-tag">✏️ Drawing Studies</span>
-              <span class="xp-tag">🍳 Sichuan Cooking</span>
+              <span class="xp-tag">🍳 Cooking</span>
               <span class="xp-tag">🏋️ Strength Training</span>
               <span class="xp-tag">🏮 Mandarin Chinese</span>
             </div>
@@ -512,7 +524,7 @@
               <span class="xp-item-date">Jun 2025 – Present</span>
             </div>
             <p class="xp-item-desc">
-              Software Engineer at Google.
+              Working on the Data Integrity Team in Google SecOps.
             </p>
           </article>
 
@@ -678,7 +690,13 @@
     <!-- ================================================================== -->
     <div class="xp-start-menu hidden" id="xpStartMenu" role="menu">
       <div class="start-header">
-        <span style="font-size:22px;">🖥️</span>
+        <img
+          src="./avatar-pixel.jpg"
+          alt="Simon Kye"
+          class="xp-start-avatar"
+          width="38"
+          height="38"
+        />
         <span>Simon Kye</span>
       </div>
       <div class="start-items">

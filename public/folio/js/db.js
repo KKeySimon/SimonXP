@@ -345,8 +345,8 @@ export async function ensureInitialData() {
       accent: '#9A5B25',
       tint: '#FBF5EE',
       weeklyTarget: 4,
-      activeTitle: 'Clair de Lune — Debussy',
-      activeSubtitle: 'Mm. 27–50 arpeggios · 76 BPM',
+      activeTitle: "Rosalina's Observatory — Mario Galaxy",
+      activeSubtitle: 'Waltz accompaniment & melody · 116 BPM',
       stages: ['Notes', 'Hands Together', 'Up to Tempo', 'Polished'],
       stageIndex: 2,
       order: 1
@@ -377,8 +377,8 @@ export async function ensureInitialData() {
       accent: '#4A6B49',
       tint: '#F2F7F2',
       weeklyTarget: 2,
-      activeTitle: 'Sichuan Wok & Pan Sauces',
-      activeSubtitle: 'Balancing mala heat, aromatics & gloss',
+      activeTitle: 'Home Cooking & New Recipes',
+      activeSubtitle: 'Technique, sauces & weeknight favorites',
       progressCurrent: 12,
       progressTarget: 20,
       progressUnit: 'dishes',
@@ -535,8 +535,8 @@ export async function ensureInitialData() {
     {
       id: 'ms_3',
       hobbyId: 'hobby_piano',
-      title: 'Clair de Lune — Opening & Rubato Phrase',
-      note: 'Recorded a clean take of the first two pages with pedaling and dynamic shaping.',
+      title: "Rosalina's Observatory — Waltz Theme Take",
+      note: 'Recorded a clean take of the opening waltz phrase with smooth left-hand jumps.',
       mediaType: 'demo_piano', // Synthesizes warm Debussy-inspired chords when tapped!
       badge: 'Clean Take',
       timestamp: now - DAY * 3.4,

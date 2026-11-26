@@ -531,9 +531,29 @@ body.night-theme .xp-side-link {
   height: 68px;
   border-radius: 8px;
   border: 2px solid #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
   flex-shrink: 0;
   overflow: hidden;
+  background: #cfd8e6;
+}
+
+.xp-pixel-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  image-rendering: pixelated;
+  border-radius: 6px;
+}
+
+.xp-start-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  object-fit: cover;
+  image-rendering: pixelated;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .xp-statusbar {

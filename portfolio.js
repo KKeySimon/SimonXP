@@ -97,15 +97,15 @@ const VFS = {
           children: {
             'bio.txt': {
               type: 'file',
-              size: 920,
+              size: 960,
               content: [
                 'Name: Simon Kye',
-                'Role: Software Engineer at Google (Jun 2025 – Present)',
+                'Role: Software Engineer at Google — Data Integrity Team, Google SecOps (Jun 2025 – Present)',
                 'Journey: Hong Kong -> Boston -> San Jose -> NYC',
                 '',
-                'Hi! My name is Simon Kye. I am a Software Engineer at Google who',
-                'graduated from Boston University (\'25) with a BA/MS dual degree in',
-                'Computer Science.',
+                'Hi! My name is Simon Kye. I am a Software Engineer at Google working on',
+                'the Data Integrity Team in Google SecOps. I graduated from Boston',
+                'University (\'25) with a BA/MS dual degree in Computer Science.',
                 '',
                 'I love programming because when something goes wrong, it is never for',
                 'some mystical reason — there is always a logical trail behind how code',
@@ -128,12 +128,12 @@ const VFS = {
             },
             'hobbies.txt': {
               type: 'file',
-              size: 380,
+              size: 360,
               content: [
-                'Current Hobbies (Tracked in /home/fun-projects/folio.app):',
-                '  * Piano       — Practicing Debussy\'s "Clair de Lune"',
+                'Current Hobbies:',
+                '  * Piano       — Practicing "Rosalina\'s Observatory"',
                 '  * Drawing     — Portrait lighting & chiaroscuro studies',
-                '  * Cooking     — Sichuan wok dishes & pan sauces',
+                '  * Cooking     — Cooking & experimenting with new recipes',
                 '  * Working Out — Upper / lower strength training split',
                 '  * Chinese     — HSK vocabulary & Mandarin graded readers'
               ].join('\n')
@@ -145,12 +145,12 @@ const VFS = {
           children: {
             'google.txt': {
               type: 'file',
-              size: 220,
+              size: 260,
               content: [
-                'Google — Software Engineer',
+                'Google — Software Engineer (Google SecOps, Data Integrity Team)',
                 'Dates: Jun 2025 – Present',
                 '',
-                '- Software Engineer at Google.'
+                '- Working on the Data Integrity Team in Google SecOps.'
               ].join('\n')
             },
             'bit-lab.txt': {
@@ -1013,7 +1013,7 @@ function runSingleSegment(segment) {
         [
           '<span class="term-dir">   ████████╗ ████████╗</span>   <span class="term-exec">simon@simonkye.com</span>',
           '<span class="term-dir">   ██╔═════╝ ██╔═════╝</span>   ------------------',
-          '<span class="term-exec">   ████████╗ ████████╗</span>   <span class="term-accent">Role:</span> Google SWE (Jun 2025 – Present)',
+          '<span class="term-exec">   ████████╗ ████████╗</span>   <span class="term-accent">Role:</span> Google SWE · SecOps Data Integrity (Jun 2025–)',
           '<span class="term-accent">   ██╔═════╝ ██╔═════╝</span>   <span class="term-accent">Education:</span> Boston University BA/MS CS (\'25)',
           '<span class="term-pink">   ████████╗ ████████╗</span>   <span class="term-accent">Journey:</span> Hong Kong -> Boston -> San Jose -> NYC',
           '<span class="term-pink">   ╚═══════╝ ╚═══════╝</span>   <span class="term-accent">Fun Apps:</span> 3D HK Room (/room.html) &amp; Folio (/folio/)',
